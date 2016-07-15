@@ -1,0 +1,106 @@
+<form role="form" id="editForm">
+  <div class="form-group">
+    <label for="patientName">Patient Name:</label>
+    <input type="text" ng-model="editLead.patientName" class="form-control" id="patientName">
+  </div>
+  <div class="form-group">
+    <label for="callerName">Caller Name:</label>
+    <input type="text" ng-model="editLead.callerName" class="form-control" id="callerName">
+  </div>
+  <div class="form-group">
+    <label for="mobile">Contact:</label>
+    <input type="text" ng-model="editLead.mobile" class="form-control" id="mobile">
+  </div>
+  <div class="form-group">
+    <label for="location">Location:</label>
+    <input type="text" ng-model="editLead.location" class="form-control" id="location">
+  </div>
+  <div class="form-group">
+    <label for="email">Email ID:</label>
+    <input type="email" ng-model="editLead.email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="age">Age:</label>
+    <input type="text" ng-model="editLead.age" class="form-control" id="age">
+  </div>
+  <div class="form-inline row">
+    <div class="form-group col-md-6 col-xs-6">
+      <label for="condition_type">Condition Type:</label>
+      <input type="text" ng-model="editLead.condition_type" class="form-control" id="condition_type">
+    </div>
+    <div class="form-group col-md-6 col-xs-6">
+      <label for="condition_name">Condition Name:</label>
+      <input type="text" ng-model="editLead.condition_name" class="form-control" id="condition_name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="gender">gender:</label>
+    <select ng-model="editLead.gender" class="form-control" id="gender">
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="leadSource">Lead Source:</label>
+    <select ng-model="editLead.leadSource" class="form-control" id="leadSource">
+      <option>JustDial</option>
+      <option>Practo</option>
+      <option>Old Patient</option>
+      <option>Old Patient Referal</option>
+      <option>Website</option>
+      <option>Google</option>
+      <option>Pamphlet</option>
+      <option>Camp</option>
+      <option>Press Advertisment</option>
+      <option>Hospital</option>
+      <option>Walk In</option>
+      <option>Other</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="sourceDetail">Source Details:</label>
+    <textarea rows="2" type="text" ng-model="editLead.sourceDetail" class="form-control" id="sourceDetail"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="SEC">SEC:</label>
+    <select ng-model="editLead.SEC" class="form-control" id="SEC">
+      <option>Hot</option>
+      <option>Medium</option>
+      <option>Cold</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="comment">Comments:</label>
+    <textarea rows="3" type="text" ng-model="editLead.comment" class="form-control" id="comment"></textarea>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+<div class="modal fade" id= "edit" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Are you sure?</h4>
+      </div>
+      <div class="modal-body">
+        <p>You are creating this record</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Go Back</button>
+        <button type="button" class="btn btn-success" ng-click="push()">Yes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade" id= "stall" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Wait</h4>
+      </div>
+      <div class="modal-body">
+        <p>You are commiting some changes</p>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

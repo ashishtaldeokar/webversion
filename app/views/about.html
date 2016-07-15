@@ -1,0 +1,32 @@
+
+<h1>Welcome {{user}}!</h1>
+<button class="button btn-lg btn-success" ng-click="createNew()"><span class="glyphicon glyphicon-plus"></span> NEW</button>
+<h2>
+  <label>Search: <input ng-model="searchText"></label>
+</h2>
+<table class="table table-striped">
+<thead>
+  <tr>
+    <th>Caller Name</th>
+    <th>Patient Name</th>
+    <th>Condition Type</th>
+    <th>Condition Name</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>Location</th>
+    <th>Mobile</th>
+  </tr>
+</thead>
+<tbody>
+  <tr ng-repeat = "lead in data | filter:searchText | orderBy:created" ng-click="show(lead)">
+    <td>{{lead.callerName}}</td>
+    <td>{{lead.patientName}}</td>
+    <td>{{lead.condition_type}}</td>
+    <td>{{lead.condition_name}}</td>
+    <td>{{lead.age}}</td>
+    <td>{{lead.gender}}</td>
+    <td>{{lead.location}}</td>
+    <td>{{lead.mobile}}</td>
+  </tr>
+</tbody>
+</table>

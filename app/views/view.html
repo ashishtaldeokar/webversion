@@ -1,0 +1,60 @@
+<blockquote>
+  <div class='well'>
+    <p>
+      <div class="label label-primary"> Patient Name:</div> <strong>{{item.patientName}}</strong>
+      <br/>
+      <div class="label label-primary"> Caller Name:</div> <strong>{{item.callerName}}</strong>
+      <br/>
+      <div class="label label-primary"> Location:</div> {{item.location}}
+      <br/>
+      <div class="label label-primary"> Contact Number:</div> {{item.mobile}}
+      <br/>
+      <div class="label label-primary"> Email ID</div> {{item.email}}
+      <br/>
+      <div class="label label-primary"> Patient Age:</div> {{item.age}}
+      <br/>
+      <div class="label label-primary"> Patient Gender:</div> {{item.gender}}
+      <br/>
+      <div class="label label-warning"> Condition Type:</div> {{item.condition_type}}
+      <div class="label label-warning"> Condition Name:</div> {{item.condition_name}}
+      <br/>
+      <div class="label label-success"> SEC:</div> {{item.SEC}}
+      <br/>
+      <div class="label label-success"> Lead Source:</div> {{item.leadSource}}
+      <br/>
+      <div class="label label-success"> Source Details:</div> {{item.sourceDetail}}
+      <br/>
+      <div class="label label-success"> Comments:</div> {{item.comment}}
+    </div>
+  </well>
+  <footer>created on <cite>{{item.created}}</cite><div class="pull-right"><button class="button btn-danger btn-sm" ng-click="delete(item)">Delete</button> <button class="button btn-sm btn-info" ng-click="edit()">Edit</button></div></footer>
+</blockquote>
+<div class="modal fade" id= "delete" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Are you sure?</h4>
+      </div>
+      <div class="modal-body">
+        <p>You are deleting this record</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Go Back</button>
+        <button type="button" class="btn btn-danger" ng-click="sureDelete()">Yes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade" id= "stallView" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Wait</h4>
+      </div>
+      <div class="modal-body">
+        <p>You are commiting some changes</p>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
